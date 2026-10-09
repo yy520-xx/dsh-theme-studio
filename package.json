@@ -1,0 +1,45 @@
+{
+  "name": "dsh-theme-studio",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 主题工坊：可视化一键换肤，10 套预设主题 + 自定义背景/强调色/毛玻璃，支持配置导入导出",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": { "default": "./lib/index.js" },
+    "./client": "./client/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": "^22.19 || >=24",
+    "dsh": ">=0.1.0-rc.6"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "theme",
+    "themes",
+    "skin",
+    "wallpaper"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [],
+      "external": [],
+      "immediately": true
+    }
+  },
+  "license": "MIT"
+}
